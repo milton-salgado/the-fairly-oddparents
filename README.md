@@ -21,19 +21,26 @@ Uma "landing page" temática sobre o desenho animado "Os Padrinho Mágicos" util
 
 ## 📋 Descrição
 
-Este é um projeto de uma "landing page" com o tema do desenho animado "Os Padrinhos Mágicos" (The Fairly OddParents). O projeto foi desenvolvido com o intuito de praticar o uso do pré-processador SASS, bem como aprimorar habilidades de semântica e flexbox.
+Este é um projeto de uma "landing page" com o tema do desenho animado "Os Padrinhos Mágicos" (The Fairly OddParents). O projeto foi desenvolvido com o intuito de praticar o uso do pré-processador SASS, bem como aprimorar habilidades de semântica e flexbox. O projeto foi apresentado em uma das aulas práticas de SASS do curso de Desenvolvimento Full-Stack do Vai na Web.
 
 ### 🚀 Funcionalidades
 
-Em breve...
+As funcionalidades disponíveis para os usuários estão listadas abaixo:
+
+- Visualizar informações sobre episódios do desenho "Os Padrinhos Mágicos".
 
 ### 🌐 Acesso
 
-Em breve...
+🖇️ [Clique aqui para acessar o projeto](https://milton-salgado.github.io/the-fairly-oddparents/)
 
 ### 📸 Prévia
-Em breve...
+<div align="center">
+  <img src="./assets/images/previa-desktop.png">
+</div>
 
+<div align="center">
+  <img src="./assets/images/previa-mobile.png">
+</div>
 
 ## ⚙️ Construção
 
@@ -58,11 +65,15 @@ Ferramentas utilizadas na construção do projeto:
 
 ### 📌 Versão
 
-Em breve...
+Versão atual: 1.0 (primeira versão)
 
 ## ✏️ Aprendizado
 
-Em breve...
+Ao fazer esse projeto, aprendi a:
+
+- Fixar conceitos de **flexbox**;
+- Utilizar **mixins** em SASS para reutilização de estilos;
+- Aprender o uso de **extends** em SASS para herança de estilos.
 
 ## ✒️ Autores
 
@@ -70,6 +81,7 @@ Em breve...
 
 ## 🎁 Agradecimentos
 
+* Agradeço ao instrutor Vinicius Bispo e à facilitadora Marina Gomes pelo auxílio no meu processo de aprendizagem e apoio na construção do projeto.
 * Agradeço também a você, visitante, por visualizar o meu projeto!
 
 ## 📨 Contato
