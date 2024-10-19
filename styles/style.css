@@ -6,4 +6,75 @@ html {
 body {
   font-family: "Inter", serif;
   color: #ffffff;
+}
+
+.button-default, header nav .button-login, header nav .button-access {
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 2.4rem;
+  cursor: pointer;
+  transition: background-color 0.5s;
+  font-weight: 600;
+}
+@media screen and (max-width: 768px) {
+  .button-default, header nav .button-login, header nav .button-access {
+    padding: 0.5rem 1rem;
+    font-size: 1.6rem;
+  }
+}
+
+header {
+  background-color: #111111;
+  padding: 2rem 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header .logo img {
+  width: 20rem;
+  height: 8rem;
+}
+header nav {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+header nav .button-access {
+  background-color: #df0712;
+}
+header nav .button-access:hover {
+  background-color: #7c040a;
+}
+header nav .button-login {
+  background-color: #181818;
+  border: 0.1rem solid #fffcfc;
+}
+header nav .button-login:hover {
+  background-color: #4b4b4b;
+}
+
+@media screen and (max-width: 768px) {
+  header .logo img {
+    width: 15rem;
+    height: 6rem;
+  }
+}
+@media screen and (max-width: 540px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  header nav {
+    display: flex;
+    justify-content: space-around;
+    gap: 0rem;
+    width: 100%;
+  }
 }/*# sourceMappingURL=style.css.map */
