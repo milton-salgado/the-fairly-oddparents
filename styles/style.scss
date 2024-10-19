@@ -1,0 +1,16 @@
+$background-color-dark-1: #111111;
+$background-color-pink-2: #181818;
+$text-color-white: #ffffff;
+$font-size-small: 1.6rem;
+$font-size-medium: 2.4rem;
+$font-size-large: 3.2rem;
+$font-family-base: "Inter", serif;
+
+html {
+    font-size: 62.5%;
+}
+
+*,
+body {
+    font-family: $font-family-base;
+}
