@@ -113,11 +113,134 @@ header {
     }
 }
 
+main {
+    background-color: $background-color-dark-2;
+    padding: 4rem 5%;
+    @include generate-flex-properties(
+        $flex-direction: column,
+        $align-items: center,
+        $gap: 4
+    );
+
+    @include generate-flex-properties(
+        $flex-direction: column,
+        $align-items: center
+    );
+
+    header {
+        width: 100%;
+        padding: 0 2.5%;
+        @include generate-flex-properties(
+            $justify-content: space-between,
+            $align-items: center
+        );
+        background-color: $background-color-dark-2;
+
+        .title {
+            @include generate-flex-properties($flex-direction: column, $gap: 2);
+
+            h1 {
+                font-size: $font-size-large;
+                font-weight: 700;
+            }
+
+            h2 {
+                font-size: $font-size-large;
+            }
+        }
+
+        .timmy {
+            img {
+                width: 12.5rem;
+                height: 12.5rem;
+            }
+        }
+    }
+
+    .episodes {
+        width: 100%;
+        padding: 0 2.5%;
+        @include generate-flex-properties($justify-content: space-between);
+
+        .card-episode {
+            width: 30%;
+            @include generate-flex-properties($flex-direction: column, $gap: 2);
+
+            .card-image {
+                @include generate-flex-properties(
+                    $justify-content: center,
+                    $align-items: center
+                );
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            .card-info {
+                @include generate-flex-properties(
+                    $flex-direction: column,
+                    $gap: 1
+                );
+                line-height: 1.5;
+
+                h3 {
+                    font-size: $font-size-medium;
+                    font-weight: 700;
+                }
+
+                p {
+                    font-size: $font-size-small;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    main {
+        .episodes {
+            @include generate-flex-properties(
+                $flex-wrap: wrap,
+                $gap: 4,
+                $justify-content: center
+            );
+
+            .card-episode {
+                width: 45%;
+
+                @include generate-flex-properties($gap: 4);
+            }
+        }
+    }
+}
+
 @media screen and (max-width: 768px) {
-    header .logo {
-        img {
-            width: 15rem;
-            height: 6rem;
+    header {
+        .logo {
+            img {
+                width: 15rem;
+                height: 6rem;
+            }
+        }
+    }
+
+    main header {
+        .title {
+            h1 {
+                font-size: $font-size-medium;
+            }
+
+            h2 {
+                font-size: $font-size-medium;
+            }
+        }
+
+        .timmy {
+            img {
+                width: 10rem;
+                height: 10rem;
+            }
         }
     }
 }
@@ -132,6 +255,30 @@ header {
                 $justify-content: space-around
             );
             width: 100%;
+        }
+    }
+
+    main {
+        header {
+            padding: 0;
+
+            .title {
+                text-align: center;
+            }
+        }
+
+        .episodes {
+            @include generate-flex-properties(
+                $flex-direction: column,
+                $gap: 4,
+                $flex-wrap: auto,
+                $align-items: center,
+                $justify-content: center
+            );
+
+            .card-episode {
+                width: 80%;
+            }
         }
     }
 }
