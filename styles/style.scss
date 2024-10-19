@@ -197,6 +197,26 @@ main {
     }
 }
 
+footer {
+    background-color: $background-color-dark-1;
+    padding: 2rem 4rem;
+
+    ul {
+        @include generate-flex-properties($gap: 4);
+
+        a {
+            color: $text-color-white-1;
+            text-decoration: none;
+            font-size: $font-size-medium;
+            font-weight: 700;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
 @media screen and (max-width: 1080px) {
     main {
         .episodes {
@@ -243,6 +263,12 @@ main {
             }
         }
     }
+
+    footer {
+        ul {
+            @include generate-flex-properties($flex-direction: column, $gap: 2);
+        }
+    }
 }
 
 @media screen and (max-width: 540px) {
@@ -279,6 +305,18 @@ main {
             .card-episode {
                 width: 80%;
             }
+        }
+    }
+
+    footer {
+        @include generate-flex-properties(
+            $justify-content: center,
+            $align-items: center
+        );
+
+        ul {
+            text-align: center;
+            @include generate-flex-properties($flex-direction: column, $gap: 2);
         }
     }
 }

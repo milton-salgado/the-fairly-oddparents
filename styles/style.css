@@ -128,6 +128,24 @@ main .episodes .card-episode .card-info p {
   font-size: 1.6rem;
 }
 
+footer {
+  background-color: #111111;
+  padding: 2rem 4rem;
+}
+footer ul {
+  display: flex;
+  gap: 4rem;
+}
+footer ul a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+footer ul a:hover {
+  text-decoration: underline;
+}
+
 @media screen and (max-width: 1080px) {
   main .episodes {
     display: flex;
@@ -155,6 +173,11 @@ main .episodes .card-episode .card-info p {
   main header .timmy img {
     width: 10rem;
     height: 10rem;
+  }
+  footer ul {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
   }
 }
 @media screen and (max-width: 540px) {
@@ -185,5 +208,16 @@ main .episodes .card-episode .card-info p {
   }
   main .episodes .card-episode {
     width: 80%;
+  }
+  footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  footer ul {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
   }
 }/*# sourceMappingURL=style.css.map */
