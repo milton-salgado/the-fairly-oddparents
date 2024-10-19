@@ -1,6 +1,7 @@
 $background-color-dark-1: #111111;
 $background-color-dark-2: #181818;
-$text-color-white: #ffffff;
+$text-color-white-1: #ffffff;
+$text-color-white-2: #fffcfc;
 $font-size-small: 1.6rem;
 $font-size-medium: 2.4rem;
 $font-size-large: 3.2rem;
@@ -14,5 +15,123 @@ html {
 *,
 body {
     font-family: $font-family-base;
-    color: $text-color-white;
+    color: $text-color-white-1;
+}
+
+@mixin generate-flex-properties(
+    $flex-direction: null,
+    $justify-content: null,
+    $align-items: null,
+    $flex-wrap: null,
+    $gap: null
+) {
+    display: flex;
+
+    @if $flex-direction != null {
+        flex-direction: $flex-direction;
+    }
+
+    @if $justify-content != null {
+        justify-content: $justify-content;
+    }
+
+    @if $align-items != null {
+        align-items: $align-items;
+    }
+
+    @if $flex-wrap != null {
+        flex-wrap: $flex-wrap;
+    }
+
+    @if $gap != null {
+        gap: $gap * 1rem;
+    }
+}
+
+.button-default {
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: $font-size-medium;
+    cursor: pointer;
+    transition: background-color 0.5s;
+    font-weight: 600;
+
+    @media screen and (max-width: 768px) {
+        padding: 0.5rem 1rem;
+        font-size: $font-size-small;
+    }
+}
+
+@mixin create-hover-effect($type) {
+    @if $type == "darken" {
+        &:hover {
+            background-color: darken($background-color-red, 20%);
+        }
+    } @else if $type == "lighten" {
+        &:hover {
+            background-color: lighten($background-color-dark-2, 20%);
+        }
+    }
+}
+
+header {
+    background-color: $background-color-dark-1;
+    padding: 2rem 4rem;
+    @include generate-flex-properties(
+        $justify-content: space-between,
+        $align-items: center
+    );
+
+    .logo {
+        @include generate-flex-properties(
+            $justify-content: center,
+            $align-items: center
+        );
+
+        img {
+            width: 20rem;
+            height: 8rem;
+        }
+    }
+
+    nav {
+        @include generate-flex-properties($align-items: center, $gap: 2);
+
+        .button-access {
+            @extend .button-default;
+            background-color: $background-color-red;
+            @include create-hover-effect("darken");
+        }
+
+        .button-login {
+            @extend .button-default;
+            background-color: $background-color-dark-2;
+            @include create-hover-effect("lighten");
+            border: 0.1rem solid $text-color-white-2;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    header .logo {
+        img {
+            width: 15rem;
+            height: 6rem;
+        }
+    }
+}
+
+@media screen and (max-width: 540px) {
+    header {
+        @include generate-flex-properties($flex-direction: column, $gap: 2);
+
+        nav {
+            @include generate-flex-properties(
+                $gap: 0,
+                $justify-content: space-around
+            );
+            width: 100%;
+        }
+    }
 }
