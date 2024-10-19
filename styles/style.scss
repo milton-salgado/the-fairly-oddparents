@@ -1,6 +1,7 @@
 $background-color-dark-1: #111111;
 $background-color-dark-2: #181818;
-$text-color-white: #ffffff;
+$text-color-white-1: #ffffff;
+$text-color-white-2: #fffcfc;
 $font-size-small: 1.6rem;
 $font-size-medium: 2.4rem;
 $font-size-large: 3.2rem;
@@ -14,5 +15,5 @@ html {
 *,
 body {
     font-family: $font-family-base;
-    color: $text-color-white;
+    color: $text-color-white-1;
 }
