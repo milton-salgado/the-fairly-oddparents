@@ -1,11 +1,11 @@
 $background-color-dark-1: #111111;
-$background-color-pink-2: #181818;
+$background-color-dark-2: #181818;
 $text-color-white: #ffffff;
 $font-size-small: 1.6rem;
 $font-size-medium: 2.4rem;
 $font-size-large: 3.2rem;
 $font-family-base: "Inter", serif;
-$backgroun-color-red: #df0712;
+$background-color-red: #df0712;
 
 html {
     font-size: 62.5%;
@@ -14,4 +14,5 @@ html {
 *,
 body {
     font-family: $font-family-base;
+    color: $text-color-white;
 }
